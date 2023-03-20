@@ -1,18 +1,7 @@
 <?php 
-function username_already_in_db($username) {
-    $conn = new mysqli("localhost", "root", "","gamecorrner");
-    $query = "SELECT * FROM user WHERE username='$username'";
-    $result = mysqli_query($conn, $query);
-    
-    if (mysqli_num_rows($result) > 0) {
-        return true;
-    } else {
-        return false;
-    }
-  }
 
   function email_already_in_db($email) {
-    $conn = new mysqli("localhost", "root", "","gamecorrner");
+    $conn = new mysqli("localhost", "root", "","licenta");
     $query = "SELECT * FROM user WHERE Email='$email'";
     $result = mysqli_query($conn, $query);
    
@@ -21,5 +10,20 @@ function username_already_in_db($username) {
     } else {
         return false;
     }
+  }
+
+  function match_password($password){
+
+    $conn=new mysqli("localhost", "root", "","licenta");
+
+    $query="SELECT Password from user WHERE Password='".md5($password)."'";
+
+    if($query>1){
+
+      return true;
+    }else{
+      return false;
+    }
+
   }
 ?>
