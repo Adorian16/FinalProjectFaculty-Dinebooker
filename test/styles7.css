@@ -8,7 +8,7 @@ section.s1
     align-items: center;
     padding: 100px;
     box-sizing: border-box;
-    background: linear-gradient(180deg, #ad5389, #3c1053), url(img/wooden-table-with-blurred-restau\ \(9\).jpg);
+    background: linear-gradient(180deg, #ad5389, #3c1053), url(img/background/wooden-table-with-blurred-restau\ \(9\).jpg);
     background-blend-mode: screen;
 }
 
@@ -69,4 +69,13 @@ left: 0;
 .title>h1{
  
     font-size: 50px;
+}
+
+.steps{
+    margin-top: 10%;
+
+}
+div.steps>img{
+    position: absolute;
+    left: 25%;
 }

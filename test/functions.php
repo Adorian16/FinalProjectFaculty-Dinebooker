@@ -26,4 +26,29 @@
     }
 
   }
+
+ function description($item){
+    if(strlen($item['Descriere'])<100)
+    {
+      echo substr($item['Descriere'],0,100);
+    }
+    else if (strlen($item['Descriere'])>=100){
+      echo substr($item['Descriere'],0,100).'...';
+    }
+  }
+
+  
+function find_restaurant_by_name($item)
+{ if(is_array($item) && isset($item)){
+    if(strpos(strtolower($item["Name"]),strtolower($_GET['Search']))!== false){
+        return true;
+        echo $item["Name"];
+    }
+    else
+    {
+        return false;
+
+    }
+} 
+}
 ?>
