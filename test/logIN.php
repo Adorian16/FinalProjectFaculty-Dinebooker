@@ -9,11 +9,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
             $result=$conn->query($sql);
     
-            if($result->num_rows>0){
-
+            if($result->num_rows>0){session_start();
+              
             $row = mysqli_fetch_array($result);
                 
-
+           
+           
         
             if(md5($password)==$row['Password']){
               
@@ -21,8 +22,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                     if($row["usertype"]=="admin"){
                         header("Location:admin.php");
                         
-                    }elseif($row["usertype"]=="user"){
-                        header("Location:user.php");
+                    }elseif($row["usertype"]=="user"){ $_SESSION['FirstName']=$row['FirstName']; 
+                        $_SESSION['LastName']=$row['LastName'];
+                        header("Location:index.php");
                     }
            
                     
