@@ -51,4 +51,15 @@ function find_restaurant_by_name($item)
     }
 } 
 }
+
+function reservation_already_in_db($restP,$dateP,$periodP,$tableP){
+  $conn = new mysqli("localhost", "root", "","licenta");
+  $qry="SELECT * from rezervari WHERE IDRestaurant='$restP' AND DateRez='$dateP' AND PeriodRez='$periodP' AND NrMasa='$tableP'";
+  $rez=mysqli_query($conn,$qry);
+  if(mysqli_num_rows($rez)>0){
+    return true;
+  }else{
+    return false;
+  }
+}
 ?>

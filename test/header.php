@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
-<link rel="stylesheet" href="styles14.css">
+<link rel="stylesheet" href="styles21.css">
     <title>Document</title>
 </head>
 <body>
@@ -37,6 +37,9 @@
 
 if($_SESSION){echo'<a class="nav-link mb-0 h4 text-dark" href="logOUT.php">Log out</a>';} else {echo '<a class="nav-link mb-0 h4 text-dark" href="sign_in_formular.php">Sign In</a>';}?></button>
       </li>
+<?php if($_SESSION){?><li class="nav-item">
+      <button type="button" class="btn btn-light btn-sm ms-2 mr-2 my-2"><a class="nav-link mb-0 h4 text-dark" href="clientReservation.php"> My Reservations</a></button>
+<?php } ?>
     </ul>
   </div>
  
