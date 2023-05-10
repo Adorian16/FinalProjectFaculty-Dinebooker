@@ -26,7 +26,7 @@
                     <input type="password" id="password" placeholder="Password" name="password" >
                     <small>Error Message</small>
                 </div>
-                <a href="#" class="forgot">Forgot your password?</a>
+                <a href="forgotPsw.php" class="forgot">Forgot your password?</a>
                 <button type="submit">Sign In</button>
             </form>
         </div>

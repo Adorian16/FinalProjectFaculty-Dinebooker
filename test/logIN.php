@@ -19,11 +19,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             if(md5($password)==$row['Password']){
               
               
-                    if($row["usertype"]=="admin"){
+                    if($row["usertype"]=="admin"){$_SESSION['IDUser']=$row['IDUser'];
+                        $_SESSION['IDRestaurant']=$row['IDRestaurant'];
                         header("Location:admin.php");
                         
                     }elseif($row["usertype"]=="user"){ $_SESSION['FirstName']=$row['FirstName']; 
                         $_SESSION['LastName']=$row['LastName'];
+                        $_SESSION['IDUser']=$row['IDUser'];
+                        $_SESSION['Email']=$row['Email'];
                         header("Location:index.php");
                     }
            

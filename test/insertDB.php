@@ -2,23 +2,28 @@
    if(isset($_REQUEST['email'])){
     $email='';
     if( isset($_POST['email'])){
-        $email = $_POST['email'];}
+        $email = $_POST['email'];
+    }
 
         $password='';
         if( isset($_POST['password'])){
-            $password = $_POST['password'];}
+            $password = $_POST['password'];
+        }
     
             $firstname='';
             if( isset($_POST['firstname'])){
-                $firstname = $_POST['firstname'];}
+                $firstname = $_POST['firstname'];
+            }
 
                 $lastname='';
                 if( isset($_POST['lastname'])){
-                    $lastname = $_POST['lastname'];}
+                    $lastname = $_POST['lastname'];
+                }
 
                     $phone='';
                     if( isset($_POST['phone'])){
-                        $phone = $_POST['phone'];}
+                        $phone = $_POST['phone'];
+                    }
     
     
     
@@ -33,7 +38,7 @@
         }
         else
         { 
-        }
+        
             $sql="INSERT INTO user(FirstName,LastName,Email,PhoneNumber,Password,usertype) VALUES 
             ('$firstname','$lastname','$email','$phone','".md5($password)."','user')";
             $account_result=$conn->query($sql);
@@ -45,5 +50,6 @@
                 <p class='link'>Click here to <a href='sign_in_formular.php'>Login</a></p>
                 </div>");
         }}
+    }
 
 ?>
