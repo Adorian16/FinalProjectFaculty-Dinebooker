@@ -1,0 +1,25 @@
+<?php 
+include "functions.php";
+include "db_connection.php";
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+   $email=$_POST['email'];
+   $password=$_POST['password'];
+
+            $sql="SELECT * FROM user WHERE Email='$email' AND Password='".md5($password)."'";
+
+            $result=$conn->query($sql);
+    
+            $row = mysqli_fetch_array($result);
+                
+                    if($row["usertype"]=="admin"){
+                        header("Location:test.php");
+                        
+                    }elseif($row["usertype"]=="user"){
+                        header("Location:test2.php");
+                    }
+
+                
+            }
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c1053" fill-opacity="1" d="M0,288L34.3,256C68.6,224,137,160,206,128C274.3,96,343,96,411,122.7C480,149,549,203,617,197.3C685.7,192,754,128,823,133.3C891.4,139,960,213,1029,224C1097.1,235,1166,181,1234,170.7C1302.9,160,1371,192,1406,208L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
