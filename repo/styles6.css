@@ -1,0 +1,71 @@
+section.s1
+{
+    position: relative;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #ad5389, #3c1053), url(img/wooden-table-with-blurred-restau\ \(9\).jpg);
+    background-blend-mode: screen;
+}
+
+section.s2
+{
+    position: relative;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+    background-color:#FFFFFF;
+}
+.wave{position: absolute;
+bottom: 0;
+left: 0;
+
+
+   
+}
+.wave2{position: absolute;
+    top:0;
+    right: 0;
+    
+    
+       
+    }
+    
+
+#info{
+    margin-bottom: 12%;
+    text-align: center;
+    margin-left: 5%;
+}
+#info>h1{
+ font-size: 85px;  
+ margin-bottom: 2%; 
+ 
+}
+
+
+#info>h2{
+    font-size: 45px;  
+    margin-bottom: 5%; 
+   }
+   
+#info>input{
+    width: 100px;
+}
+ 
+.title{
+    margin-left:25%;
+
+}
+.title>h1{
+ 
+    font-size: 50px;
+}
